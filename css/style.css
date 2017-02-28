@@ -1,0 +1,41 @@
+body {
+	background: silver;
+	font-family: 'Arial', sans-serif;
+	font-size: 14px;
+}
+
+#container {
+	width: 60%;
+	background: cyan;
+	margin: 20px auto;
+	overflow: auto;
+	padding: 25px;
+}
+
+header {
+	text-align: center;
+	border-bottom: black dashed 1px;
+}
+
+header h1{
+	margin: 0;
+	padding: 0;
+}
+
+footer {
+	text-align: center;
+	font-size: 10px;
+}
+
+input[type='submit']{
+	background: white;
+	color: black;
+	padding: 10px;
+	margin: 20px;
+}
+
+#results h3{
+	background: orange;
+	padding: 10px;
+	margin: 10px 0px;
+}

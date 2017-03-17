@@ -40,6 +40,6 @@ function submitAnswers(){
 		}
 	}
 
-	alert("Your score: " + score);
+	alert("Your score:  " + score);
 
 }

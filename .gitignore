@@ -1,0 +1,15 @@
+# npm debugging logs
+*.log
+
+# project dependencies
+node_modules
+dist
+public/dist
+
+# OSX folder attributes
+.DS_Store
+
+# temporary files
+*.tmp
+*~
+jquery-3.2.0.js

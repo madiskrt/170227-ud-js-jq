@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>content slider</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style1.css">
+	<script>
+		$(document).ready(function(){
+			var speed = 500; //transition speed
+			var autoswitch = true;
+			var autoswitch_speed = 3000;
+
+			//the first slide
+			$('.slide').first().addClass('active');
+
+			//Hide all slides
+			$('.slide').hide();
+			$('.active').show();
+
+			$('#next').on('click', nextSlide);
+
+			$('#prev').on('click', prevSlide);
+
+			if(autoswitch == true){
+				setInterval(nextSlide, autoswitch_speed);
+			}
+
+			// switch to the next slide
+			function nextSlide(){
+				$('.active').removeClass('active').addClass('oldActive');
+				if($('.oldActive').is(':last-child')){
+					$('.slide').first().addClass('active');
+				} else {
+					//if it's not the last child we want to go to the next one
+					$('.oldActive').next().addClass('active');
+				}
+				//we want to remove the old class altogether
+				$('.oldActive').removeClass('oldActive');
+				//we can fade out
+				$('.slide').fadeOut(speed);
+				$('.active').fadeIn(speed);
+			}
+
+			function prevSlide(){
+				$('.active').removeClass('active').addClass('oldActive');
+				if($('.oldActive').is(':first-child')){
+					$('.slide').last().addClass('active');
+				} else {
+					//if it's not the last child we want to go to the next one
+					$('.oldActive').prev().addClass('active');
+				}
+				//we want to remove the old class altogether
+				$('.oldActive').removeClass('oldActive');
+				//we can fade out
+				$('.slide').fadeOut(speed);
+				$('.active').fadeIn(speed);
+			}
+
+		});
+	</script>
+</head>
+<body>
+<div id="container">
+	<header>
+		<h1>jQuery Content Slider</h1>
+	</header>
+	
+	<img src="img/leftarrow.png" alt="Prev" id="prev">
+	<div id="slider">
+
+	<div class="slide">
+		<div class="slide-copy">
+			<h2>Slider One</h2>
+			<p>Lorem ipsum dolor sit amet ... This expression, reminiscent of a Latin sentence, has been used by the printing press in the printing industry for several centuries.</p>
+		</div>
+		<img src="img/img1c.jpg">
+	</div>
+	<div class="slide">
+		<div class="slide-copy">
+			<h2>Slider Two</h2>
+			<p>These insignificant texts created to express the writing fields are called Lorem İpsum. With the spread of usage area over time, Lorem Ipsum is abbreviated as Lipsum.</p>
+		</div>
+		<img src="img/img2c.jpg">
+	</div>
+	<div class="slide">
+		<div class="slide-copy">
+			<h2>Slider Three</h2>
+			<p>In digital publishing, Lipsum was first used in Adobe's PageMaker program in the mid-1980s.</p>
+		</div>
+		<img src="img/img3c.jpg">
+	</div>
+	
+	</div>
+	<img src="img/rightarrow.png" alt="next" id="next">
+</div>
+<img src="img/170317-content-slider2" border="1">
+</body>
+</html>

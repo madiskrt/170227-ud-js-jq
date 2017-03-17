@@ -3,13 +3,35 @@
 <head>
 	<title></title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<style type="text/css">
+		.red {color: red;}
+		.green {color: green;}
+	</style>
 	<script>
 		$(document).ready(function(){
+			$('h1').addClass('red');
 
+			$('.myLink').on('mouseenter', function(){
+				//alert("You clicked!");
+				//$('h1').fadeToggle(1000);
+				//$('h1').slideToggle(500);
+				$('h1').addClass('green');
+			});
+
+			$('.myLink').on('mouseleave', function(){
+				$('h1').removeClass('green');
+			});
+
+			$('.myLink').click(function(){
+				//$('h1').text('Hello world!');
+				//$('h1').replaceWith('<h3>Hello world!</h3>');
+				$('h1').css('font-size','40px');
+			});
 		});
 	</script>
 </head>
 <body>
-
+<h1>Welcome</h1>
+<a href="#" class="myLink">Click Me</a>
 </body>
 </html>

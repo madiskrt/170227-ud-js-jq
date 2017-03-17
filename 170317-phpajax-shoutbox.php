@@ -1,7 +1,7 @@
 <?php include 'database.php'; ?>
 <?php
 //create select query
-$query = "SELECT * FROM shouts ORDER BY id ASC";
+$query = "SELECT * FROM shouts ORDER BY id DESC LIMIT 5";
 $shouts = mysqli_query($con, $query);
 
 ?>
@@ -34,6 +34,11 @@ $shouts = mysqli_query($con, $query);
 			<input type="submit" name="" id="submit" value="SHOUT!">
 		</form>
 	</footer>
+
+	<img src="img/170317-phpajax-shoutbox.jpg" border="1">
+	<img src="img/shoutbox.jpg" border="1">
+	<img src="img/shoutb.jpg" border="1">
+
 </div>
 </body>
 </html>

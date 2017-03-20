@@ -1,0 +1,33 @@
+{
+	"name": "linkit",
+	"title": "LinkIt jQuery Plugin",
+	"description": "cnvert any element to link",
+	"keywords": [
+		"link",
+		"html",
+		"content"
+	],
+	"version": "0.1.0",
+	"author": {
+		"name": "madiskrt",
+		"url": "http://www.example.com/licenses/gpl.html"
+	},
+	"maintainers": [
+		{
+			"name": "madiskrt",
+			"email": "madiskrt@gmail.com",
+			"url": "http://www.example.com/licenses/gpl.html"
+		}
+	],
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://www.example.com/licenses/LICENSE.txt"
+		}
+	],
+	"homepage": "http://www.example.com/licenses/gpl.html",
+	"docs": "http://www.example.com/licenses/gpl.html",
+	"dependencies": {
+		"jquery": ">=1.9"
+	}
+}
